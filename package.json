@@ -1,0 +1,31 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feykicat23/firstProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feykicat23/firstProject/issues"
+  },
+  "homepage": "https://github.com/Feykicat23/firstProject#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-react": "^7.33.1",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

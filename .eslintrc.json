@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "overrides": [
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/extensions": ["error", "ignorePackages", {"js": "always"}],
+    "prefer-arrow-callback": 0,
+    "mocha/prefer-arrow-callback": 2,
+    "linebreak-style": 0
+  },
+  "extends": ["airbnb", "plugin:mocha/recommended"],
+  "plugins": [
+    "mocha"
+  ]
+}
