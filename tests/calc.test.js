@@ -57,7 +57,7 @@ describe('Функция проверки расчета размера пост
   });
 
   it('Ссылка с верхним регистром', function () {
-    const expectedResult = 15;
+    const expectedResult = 0;
     const result = postSize('HTTP://test.NET');
     assert.equal(expectedResult, result);
   });

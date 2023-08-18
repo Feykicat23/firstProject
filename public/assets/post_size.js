@@ -8,7 +8,7 @@ const postSize = (post) => {
 
   let linkLength = 0;
 
-  const array = post.split(' ');
+  const array = post.toLowerCase().split(' ');
 
   for (let i = 0; i < array.length; i++) {
     const isAlink = array[i];
