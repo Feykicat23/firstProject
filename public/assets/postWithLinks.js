@@ -15,16 +15,16 @@ const postWithLinks = (postLinks) => {
     if (isAlink.startsWith('https://') || isAlink.startsWith('http://') || isAlink.startsWith('www.')) {
       if (end) {
         isAlink.slice(0, -1);
-        array[i] = `<a href="${isAlink}">${isAlink}</a>`;
+        isAlink = `<a href="${isAlink}">${isAlink}</a>`;
       } else {
-        array[i] = `<a href="${isAlink}">${isAlink}</a>`;
+        isAlink = `<a href="${isAlink}">${isAlink}</a>`;
       }
     } else if (domenDictionary.some((domain) => isAlink.includes(domain))) {
       if (end) {
         const link = isAlink.slice(0, -1);
-        array[i] = `<a href="https://${link}">${isAlink}</a>`;
+        isAlink = `<a href="https://${link}">${isAlink}</a>`;
       } else {
-        array[i] = `<a href="https://${isAlink}">${isAlink}</a>`;
+        isAlink = `<a href="https://${isAlink}">${isAlink}</a>`;
       }
     }
   }
