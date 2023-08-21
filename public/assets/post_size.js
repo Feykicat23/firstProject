@@ -3,30 +3,34 @@ const postSize = (post) => {
     '.com', '.net', '.org', '.gov', '.edu', '.info', '.us', '.ru', '.app', '.store',
     '.club',
   ];
-  let length = 0;
+  // const protocols = ['https://', "http://", "www."]
+  const endsWith = [',', '!', '.', '$', '"', '|', ':', '№', '?', ')'];
 
-  const array = post.split(' ');
+  let linkLength = 0;
 
-  for (let i = 0; i < post.length; i++) {
-    if (post[i] === ' ' || post[i] === ',') {
-      length++;
-    }
-  }
+  const array = post.toLowerCase().split(' ');
 
   for (let i = 0; i < array.length; i++) {
-    let isAdomen = false;
+    const isAlink = array[i];
+    const end = endsWith.some((ending) => isAlink.endsWith(ending));
 
-    for (let j = 0; j < domenDictionary.length; j++) {
-      if (array[i].includes(domenDictionary[j])) {
-        isAdomen = true;
-        break;
+    if (domenDictionary.some((domain) => isAlink.includes(domain))) {
+      if (end) {
+        linkLength += isAlink.length - 1;
+      } else {
+        linkLength += isAlink.length;
+      }
+    } else if
+    (isAlink.startsWith('https://') || isAlink.startsWith('http://') || isAlink.startsWith('www.')) {
+      if (end) {
+        linkLength += isAlink.length - 1;
+      } else {
+        linkLength += isAlink.length;
       }
     }
-    if (!isAdomen) {
-      length += array[i].length;
-    }
   }
-  return length;
+
+  return post.length - linkLength;
 };
 
 export default postSize;
