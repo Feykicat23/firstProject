@@ -18,13 +18,13 @@ const isAValidMail = (mail) => {
 
   if (dogIndex === -1 || mail.length > 63) {
     return false;
-  } 
-  if (mail.endsWith('@') || mail.startsWith('@')){
-    return false
+  }
+  if (mail.endsWith('@') || mail.startsWith('@')) {
+    return false;
   }
   if (mail.includes('..') || mail.trim().includes(' ')) {
     return false;
-  } 
+  }
   if (!endsOfMail.some((popularDomain) => mail.endsWith(popularDomain))) {
     return false;
   }
@@ -32,5 +32,4 @@ const isAValidMail = (mail) => {
     return false;
   }
   return true;
-}
-
+};
