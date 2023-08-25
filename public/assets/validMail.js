@@ -11,9 +11,6 @@ const isAValidMail = (mail) => {
     }
   }
 
-  const endsOfMail = ['.com', '.net', '.org', '.gov', '.edu', '.info', '.us', '.ru', '.app', '.store',
-    '.club'];
-
   const endOfMail = mail.slice(dogIndex);
 
   if (dogIndex === -1 || mail.length > 63) {
@@ -23,9 +20,6 @@ const isAValidMail = (mail) => {
     return false;
   }
   if (mail.includes('..') || mail.trim().includes(' ')) {
-    return false;
-  }
-  if (!endsOfMail.some((popularDomain) => mail.endsWith(popularDomain))) {
     return false;
   }
   if (endOfMail.length < 5) {
