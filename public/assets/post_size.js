@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const postSize = (post) => {
   const domenDictionary = [
     '.com', '.net', '.org', '.gov', '.edu', '.info', '.us', '.ru', '.app', '.store',

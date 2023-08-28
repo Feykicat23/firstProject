@@ -1,5 +1,9 @@
+/* eslint-disable mocha/max-top-level-suites */
+/* eslint-disable no-unused-vars */
+/* eslint-disable func-names */
 import { assert } from 'chai';
 import postSize from '../public/assets/post_size.js';
+import postWithLinks from '../public/assets/postWithLinks.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
@@ -59,6 +63,14 @@ describe('Функция проверки расчета размера пост
   it('Ссылка с верхним регистром', function () {
     const expectedResult = 0;
     const result = postSize('HTTP://test.NET');
+    assert.equal(expectedResult, result);
+  });
+});
+
+describe('Функция замены ссылок на html код', function () {
+  it('без ссылок', function () {
+    const expectedResult = 'Привет <a href="https://github.com">github.com</a>';
+    const result = postWithLinks('Привет github.com');
     assert.equal(expectedResult, result);
   });
 });
