@@ -5,6 +5,7 @@
 import { assert } from 'chai';
 import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
+import isAValidMail from '../public/assets/validMail.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
@@ -111,4 +112,47 @@ describe('Функция замены ссылок на html код', function (
     assert.equal(expectedResult, result);
   });
 });
-/// ////////////
+/// ////////////////////////////////////////// Функция определения валидности почты
+describe('Функция определения валидности почты', function () {
+  it('Определеяет стандартный ящик gmail почты', function () {
+    const expectedResult = true;
+    const result = isAValidMail('arsa.koshkin@gmail.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Почта не валидна, если содержит пробелы', function () {
+    const expectedResult = false;
+    const result = isAValidMail('arsa.kosh kin@gmail.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Поле ввода почты может содержать пробелы', function () {
+    const expectedResult = true;
+    const result = isAValidMail('  arsa.koshkin@gmail.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Слишком короткий домен - невалидная почта', function () {
+    const expectedResult = false;
+    const result = isAValidMail('user@.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Почта не может содержать более одного знака "@"', function () {
+    const expectedResult = false;
+    const result = isAValidMail('arsa@koshkin@gmail.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Почта не может быть длиннее 63 символов', function () {
+    const expectedResult = false;
+    const result = isAValidMail('arsa54t3ttregergergesgergregrsgrsgrgrgtrsgrsgrsgrsgrs.koshkin@gmail.com');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Почта не может начинаться с "@"', function () {
+    const expectedResult = false;
+    const result = isAValidMail('@koshkingmail.com');
+    assert.equal(expectedResult, result);
+  });
+});
