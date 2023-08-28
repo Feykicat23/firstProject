@@ -1,3 +1,4 @@
+/* eslint-disable mocha/no-identical-title */
 /* eslint-disable mocha/max-top-level-suites */
 /* eslint-disable no-unused-vars */
 /* eslint-disable func-names */
@@ -66,11 +67,48 @@ describe('Функция проверки расчета размера пост
     assert.equal(expectedResult, result);
   });
 });
-
+/// ////////////////////////////////////////// Функция замены ссылок на html код
 describe('Функция замены ссылок на html код', function () {
-  it('без ссылок', function () {
+  it('Определеяет окончание .com', function () {
     const expectedResult = 'Привет <a href="https://github.com">github.com</a>';
     const result = postWithLinks('Привет github.com');
     assert.equal(expectedResult, result);
   });
+
+  it('Обрабатывает несколько ссылок с разными окончаниями', function () {
+    const expectedResult = 'Зайди на <a href="https://google.com">google.com</a> и на <a href="https://mail.ru">mail.ru</a>';
+    const result = postWithLinks('Зайди на google.com и на mail.ru');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Подчеркивает готовую ссылку без добавления новых протоколов', function () {
+    const expectedResult = 'Здравствуйте <a href="https://developer.mozilla.org">https://developer.mozilla.org</a>';
+    const result = postWithLinks('Здравствуйте https://developer.mozilla.org');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Игнорирует знаки препинания в итоговой ссылке', function () {
+    const expectedResult = 'Здравствуйте <a href="https://developer.mozilla.org">https://developer.mozilla.org,</a> <a href="https://ru.wikipedia.org/wiki/URL">https://ru.wikipedia.org/wiki/URL.</a>';
+    const result = postWithLinks('Здравствуйте https://developer.mozilla.org, https://ru.wikipedia.org/wiki/URL.');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Обрабатывает ссылки с другими протоколами', function () {
+    const expectedResult = 'Зайди на <a href="http://google.com">http://google.com</a> и на <a href="www.mail.ru">www.mail.ru</a>';
+    const result = postWithLinks('Зайди на http://google.com и на www.mail.ru');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Не конвертирует текст в ссылки', function () {
+    const expectedResult = 'Зайди на google и на mail';
+    const result = postWithLinks('Зайди на google и на mail');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Обрабатывает ссылки независимо от регистра', function () {
+    const expectedResult = 'Зайди на <a href="https://GOOGle.com">GOOGle.com</a> и на <a href="https://MAIL.ru">MAIL.ru</a>';
+    const result = postWithLinks('Зайди на GOOGle.com и на MAIL.ru');
+    assert.equal(expectedResult, result);
+  });
 });
+/// ////////////
