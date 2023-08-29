@@ -6,6 +6,7 @@ import { assert } from 'chai';
 import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
 import isAValidMail from '../public/assets/validMail.js';
+import postHbSent from '../public/assets/postHbSent.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
@@ -153,6 +154,50 @@ describe('Функция определения валидности почты'
   it('Почта не может начинаться с "@"', function () {
     const expectedResult = false;
     const result = isAValidMail('@koshkingmail.com');
+    assert.equal(expectedResult, result);
+  });
+});
+/// ////////////////////////////////////////// Функция преобразования числа во время
+describe('Функция определения валидности почты', function () {
+  it('Возвращает "one hour ago", если прошло 60 минут', function () {
+    const expectedResult = 'one hour ago';
+    const result = postHbSent(60);
+    assert.equal(expectedResult, result);
+  });
+
+  it('2345 минут это один день', function () {
+    const expectedResult = 'one day ago';
+    const result = postHbSent(2345);
+    assert.equal(expectedResult, result);
+  });
+
+  it('Возвращает "2 days ago", если прошло ровно 2880', function () {
+    const expectedResult = '2 days ago';
+    const result = postHbSent(2880);
+    assert.equal(expectedResult, result);
+  });
+
+  it('должна вернуть "over a year ago" для 525601 минут', function () {
+    const expectedResult = 'over a year ago';
+    const result = postHbSent(525601);
+    assert.equal(expectedResult, result);
+  });
+
+  it('должна вернуть "one minute ago" для 1 минуты', function () {
+    const expectedResult = 'one minute ago';
+    const result = postHbSent(1);
+    assert.equal(expectedResult, result);
+  });
+
+  it('должна вернуть "20 minutes ago" для 20', function () {
+    const expectedResult = '20 minutes ago';
+    const result = postHbSent(20);
+    assert.equal(expectedResult, result);
+  });
+
+  it('должна вернуть "365 days ago" для числа 525600', function () {
+    const expectedResult = '365 days ago';
+    const result = postHbSent(525600);
     assert.equal(expectedResult, result);
   });
 });
