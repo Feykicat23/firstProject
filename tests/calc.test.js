@@ -7,6 +7,7 @@ import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
 import isAValidMail from '../public/assets/validMail.js';
 import postHbSent from '../public/assets/postHbSent.js';
+import hashTags from '../public/assets/hashtags.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
@@ -204,6 +205,50 @@ describe('Функция определения валидности почты'
   it('должна вернуть "365 days ago" для числа 525600', function () {
     const expectedResult = '365 days ago';
     const result = postHbSent(525600);
+    assert.equal(expectedResult, result);
+  });
+});
+/// ////////////////////////////////////////// Функция замены хэштегов на html код
+describe('Функция замены хэштегов на html код', function () {
+  it('Возвращает корректный html код с одним стандартным хэштегом', function () {
+    const expectedResult = 'Кто еще изучает <a href="/search?tag=javascript">#javascript</a> ?';
+    const result = hashTags('Кто еще изучает #javascript ?');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Возвращает корректный html код, с двумя стандартными хэштегами', function () {
+    const expectedResult = 'Я написал <a href="/search?tag=новыйПост">#новыйПост</a> о <a href="/search?tag=разработке">#разработке</a>';
+    const result = hashTags('Я написал #новыйПост о #разработке');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Игнорирует знаки препинания', function () {
+    const expectedResult = 'Я написал о <a href="/search?tag=разработке">#разработке,</a> <a href="/search?tag=проекте">#проекте.</a>';
+    const result = hashTags('Я написал о #разработке, #проекте.');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Не конвертриует текст в хэштеги, когда знак "#" не в начале слова', function () {
+    const expectedResult = 'Пароль qwe#ty';
+    const result = hashTags('Пароль qwe#ty');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Не преобразовывает хэштеги длинной 1 символ', function () {
+    const expectedResult = '#a #b #c';
+    const result = hashTags('#a #b #c');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Преобразовывает хэштеги длинной более 1 символа', function () {
+    const expectedResult = '<a href="/search?tag=ab">#ab</a> <a href="/search?tag=cd">#cd</a>';
+    const result = hashTags('#ab #cd');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Преобразовывает хэштеги с окончаниями', function () {
+    const expectedResult = '<a href="/search?tag=linkinpark">#linkinpark!</a>';
+    const result = hashTags('#linkinpark!');
     assert.equal(expectedResult, result);
   });
 });
