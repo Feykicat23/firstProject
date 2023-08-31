@@ -165,6 +165,12 @@ describe('Функция определения валидности почты'
     assert.equal(expectedResult, result);
   });
 
+  it('Возвращает "one hour ago", если прошло 61 минут', function () {
+    const expectedResult = 'one hour ago';
+    const result = postHbSent(61);
+    assert.equal(expectedResult, result);
+  });
+
   it('2345 минут это один день', function () {
     const expectedResult = 'one day ago';
     const result = postHbSent(2345);
