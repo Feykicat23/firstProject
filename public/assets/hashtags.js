@@ -1,12 +1,8 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-unused-vars */
 const hashTags = (hashtags) => {
   const array = hashtags.split(' ');
   const endsWith = [',', '!', '.', '$', '"', '|', ':', '№', '?', ')'];
 
-  for (let i = 0; i < array.length; i++) {
-    const currentTag = array[i];
-
+  array.forEach((currentTag, i, array) => {
     if (currentTag.startsWith('#') && currentTag.length > 2) {
       let tag = currentTag.slice(1); // Удаление символа #
 
@@ -19,7 +15,7 @@ const hashTags = (hashtags) => {
 
       array[i] = `<a href="/search?tag=${tag}">${currentTag}</a>`;
     }
-  }
+  });
 
   return array.join(' ');
 };

@@ -14,7 +14,8 @@
     "import/extensions": ["error", "ignorePackages", {"js": "always"}],
     "prefer-arrow-callback": 0,
     "mocha/prefer-arrow-callback": 2,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "allowForLoopAfterthoughts": true
   },
   "extends": ["airbnb", "plugin:mocha/recommended"],
   "plugins": [
