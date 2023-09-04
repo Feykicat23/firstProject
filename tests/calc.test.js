@@ -3,7 +3,6 @@ import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
 import isAValidMail from '../public/assets/validMail.js';
 import postHbSent from '../public/assets/postHbSent.js';
-import hashTags from '../public/assets/hashtags.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
