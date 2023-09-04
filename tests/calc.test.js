@@ -1,7 +1,3 @@
-/* eslint-disable mocha/no-identical-title */
-/* eslint-disable mocha/max-top-level-suites */
-/* eslint-disable no-unused-vars */
-/* eslint-disable func-names */
 import { assert } from 'chai';
 import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
