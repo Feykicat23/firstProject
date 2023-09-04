@@ -1,13 +1,10 @@
-/* eslint-disable mocha/no-identical-title */
-/* eslint-disable mocha/max-top-level-suites */
-/* eslint-disable no-unused-vars */
-/* eslint-disable func-names */
 import { assert } from 'chai';
 import postSize from '../public/assets/post_size.js';
 import postWithLinks from '../public/assets/postWithLinks.js';
 import isAValidMail from '../public/assets/validMail.js';
 import postHbSent from '../public/assets/postHbSent.js';
 import hashTags from '../public/assets/hashtags.js';
+import recommSystem from '../public/assets/recommSystem.js';
 
 describe('Функция проверки расчета размера поста', function () {
   it('без ссылок', function () {
@@ -250,5 +247,173 @@ describe('Функция замены хэштегов на html код', functi
     const expectedResult = '<a href="/search?tag=linkinpark">#linkinpark!</a>';
     const result = hashTags('#linkinpark!');
     assert.equal(expectedResult, result);
+  });
+});
+/// ////////////////////////////////////////// Функция рекомендательной системы по хэштэгам
+describe('Функция рекомендательной системы по хэштэгам', function () {
+  it('Возвращает один профиль с совпадением хэштегов', function () {
+    const expectedResult = [258];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'как вам новая песня #linkinpark',
+      ],
+    };
+    const profiles = [
+      {
+        id: 257,
+        posts: [
+          'Сегодня вышла новая версия #javascript',
+          'как вам новая версия #javascript?',
+        ],
+      },
+      {
+        id: 258,
+        posts: [
+          '#сегодня мне не понравилась новая песня #linkinpark',
+        ],
+      },
+    ];
+    const count1 = 1;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
+  });
+
+  it('Возвращает два профиля, несмотря на отсутствие общих хэштегов', function () {
+    const expectedResult = [258, 257];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'как вам новая песня #linkinpark',
+      ],
+    };
+    const profiles = [
+      {
+        id: 257,
+        posts: [
+          'Сегодня вышла новая версия #javascript',
+          'как вам новая версия #javascript?',
+        ],
+      },
+      {
+        id: 258,
+        posts: [
+          '#сегодня мне не понравилась новая песня #linkinpark',
+        ],
+      },
+    ];
+    const count1 = 2;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
+  });
+
+  it('Возвращает профили в порядке убывания колличеств совпадений по хэштегам', function () {
+    const expectedResult = [258, 259, 257];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'Кому не нравится #разработка веб-приложений?',
+      ],
+    };
+    const profiles = [
+      {
+        id: 257,
+        posts: [
+          'Сегодня вышла новая версия #javascript',
+          'как вам новая версия #javascript?',
+        ],
+      },
+      {
+        id: 258,
+        posts: [
+          '#сегодня мне не понравилась новая песня #linkinpark',
+        ],
+      },
+      {
+        id: 259,
+        posts: [
+          'Сегодня завершилась #разработка нового приложения',
+        ],
+      },
+    ];
+    const count1 = 3;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
+  });
+
+  it('Возвращает пустой массив, если нет профилей для рекомендации', function () {
+    const expectedResult = [];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'как вам новая песня #linkinpark',
+      ],
+    };
+    const profiles = [];
+    const count1 = 1;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
+  });
+
+  it('Возвращает все профили, если искомое количество больше, того что есть', function () {
+    const expectedResult = [258, 257];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'как вам новая песня #linkinpark',
+      ],
+    };
+    const profiles = [
+      {
+        id: 257,
+        posts: [
+          'Сегодня вышла новая версия #javascript',
+          'как вам новая версия #javascript?',
+        ],
+      },
+      {
+        id: 258,
+        posts: [
+          '#сегодня мне не понравилась новая песня #linkinpark',
+        ],
+      },
+    ];
+    const count1 = 3;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
+  });
+
+  it('Возвращает профили даже если нет совпадений', function () {
+    const expectedResult = [257, 258];
+    const profile = {
+      id: 256,
+      posts: [
+        'Привет. #сегодня был на концерте группы #linkinpark',
+        'как вам новая песня #linkinpark',
+      ],
+    };
+    const profiles = [
+      {
+        id: 257,
+        posts: [
+          'Сегодня вышла новая версия #javascript',
+          'как вам новая версия #javascript?',
+        ],
+      },
+      {
+        id: 258,
+        posts: [
+          'сегодня мне не понравилась новая песня linkinpark',
+        ],
+      },
+    ];
+    const count1 = 2;
+    const result = recommSystem(profile, profiles, count1);
+    assert.deepEqual(expectedResult, result);
   });
 });
