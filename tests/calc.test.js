@@ -5,6 +5,7 @@ import isAValidMail from '../public/assets/validMail.js';
 import postHbSent from '../public/assets/postHbSent.js';
 import hashTags from '../public/assets/hashtags.js';
 import recommSystem from '../public/assets/recommSystem.js';
+import platformFilter from '../public/assets/platformFilter.js';
 
 
 describe('Функция проверки расчета размера поста', function () {
@@ -417,5 +418,45 @@ describe('Функция рекомендательной системы по х
     const result = recommSystem(profile, profiles, count1);
     assert.deepEqual(expectedResult, result);
   });
+
+});
+/// ////////////////////////////////////////// Функция фильтр мата и цензура
+describe('Функция фильтр мата и цензура', function () {
+  it('Возвращает строку с зацензуренным словом', function () {
+    const expectedResult = 'Да вы что?? ******, там?';
+    const result = platformFilter('Да вы что?? охуели, там?');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Возвращает строку с несколькими словами', function () {
+    const expectedResult = 'Да *****, это просто ******.';
+    const result = platformFilter('Да блять, это просто пиздец.');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Определяет матное слово независимо от регистра', function () {
+    const expectedResult = '**** the police';
+    const result = platformFilter('Fuck the police');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Определяет матное слово c восклицательным знаком на конце', function () {
+    const expectedResult = 'Move your ***!';
+    const result = platformFilter("Move your ass!");
+    assert.equal(expectedResult, result);
+  });
+
+  it('Определяет слово обьединенное с другими словами', function () {
+    const expectedResult = '*************';
+    const result = platformFilter('Eбанутыймудак');
+    assert.equal(expectedResult, result);
+  });
+
+  it('Никак не затрагивает обычный текст', function () {
+    const expectedResult = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed impedit beatae, ex possimus voluptas aspernatur, fugiat natus nesciunt vitae laborum, dignissimos repudiandae dolorem! Accusamus a dolorem similique dignissimos? Quasi, consequatur?';
+    const result = platformFilter('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed impedit beatae, ex possimus voluptas aspernatur, fugiat natus nesciunt vitae laborum, dignissimos repudiandae dolorem! Accusamus a dolorem similique dignissimos? Quasi, consequatur?');
+    assert.equal(expectedResult, result);
+  });
+
 });
 
