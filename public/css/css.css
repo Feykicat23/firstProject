@@ -1,27 +1,30 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
-  
+
   /* Мобильные стили */
   @media only screen and (max-width: 412px) {
   body {
         /* background-color: #F09A9D; */
         display: flex;
-        justify-content: center;
+        font-family: Lato;
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
         margin: 0 auto;
+        height: 2321px;
+        background: #FFF;
+        height: 100vh;
+        width: 100vw;
     }
 
 .banner {
     /* position: absolute; */
     display: flex;
     width: 100%;
-    height: 528px;
+    height: 545px;
     left: 0px;
     top: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -39,13 +42,9 @@
 }
 
 .cover {
-    /* position: absolute; */
-    display: flex;
-    width: 100%;
-    height: 160px;
-    left: 0px;
-    top: 368px;
-    flex-direction: column;
+    height: 225px;
+    background-image: url(/Users/user/Desktop/firstProject/public/banner.svg);
+    background-size: cover;
 }
 
 .rectangle21 {
@@ -69,7 +68,8 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 ;
+    padding-bottom: 18px;
+    padding-top: 24px;
 }
 
 .Group28 {
@@ -151,9 +151,35 @@ label {
 
 /* Stay in touch
 with friends even when they are not around */
+h1 {
+    /* position: absolute; */
+    width: 328px;
+    height: 116px;
+    left: 16px;
+    top: 84px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #000000;
+}
+
+.rectangle21 {
+    width: 300px;
+}
+
+.photo {
+    width: 100vw;
+    height: 203px;
+    flex-shrink: 0;
+}
+
 p {
     /* position: absolute; */
-    display: flex;
     width: 328px;
     height: 116px;
     left: 16px;
@@ -168,7 +194,40 @@ p {
     color: #000000;
 }
 
-
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 457px;
+    flex-shrink: 0;
+    background: #0057FF;
+    padding-top: 20px;
+    margin-bottom: 37px;
 }
-  
 
+.num {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 200px;
+    height: 58px;
+}
+
+.small {
+    font-size: 18px;
+    height: 44px;
+}
+
+.Group {
+    width: 200px;
+    height: 130px;
+    flex-shrink: 0;
+}
+
+};
