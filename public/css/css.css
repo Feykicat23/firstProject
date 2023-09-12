@@ -7,37 +7,29 @@
   /* Мобильные стили */
   @media only screen and (max-width: 412px) {
   body {
-        /* background-color: #F09A9D; */
         display: flex;
         font-family: Lato;
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
         margin: 0 auto;
-        height: 2321px;
         background: #FFF;
         height: 100vh;
         width: 100vw;
     }
 
 .banner {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 545px;
-    left: 0px;
-    top: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: 0;
     }
 
 .bannedContent {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 528px;
-    left: 0px;
-    top: 0px;
     flex-direction: column;
 }
 
@@ -58,7 +50,6 @@
 }
 
 .background {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 368px;
@@ -73,7 +64,6 @@
 }
 
 .Group28 {
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +76,6 @@
 }
 
 .buttons {
-    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -111,7 +100,6 @@
 
 button {
     box-sizing: border-box;
-    /* position: absolute; */
     display: flex;
     left: 0%;
     right: 0%;
@@ -122,7 +110,6 @@ button {
 }
 
 .logIn {
-    /* position: absolute; */
     display: flex;
     width: 328px;
     height: 52px;
@@ -135,7 +122,6 @@ button {
 }
 
 label {
-    /* position: absolute; */
     left: 0%;
     right: 0%;
     top: 28.85%;
@@ -145,14 +131,12 @@ label {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
     text-align: center;
     }
 
 /* Stay in touch
 with friends even when they are not around */
 h1 {
-    /* position: absolute; */
     width: 328px;
     height: 116px;
     left: 16px;
@@ -179,11 +163,8 @@ h1 {
 }
 
 p {
-    /* position: absolute; */
     width: 328px;
     height: 116px;
-    left: 16px;
-    top: 84px;
     text-align: center;
     font-family: 'Lato';
     font-style: normal;
