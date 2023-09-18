@@ -35,7 +35,7 @@
 
 .cover {
     height: 225px;
-    background-image: url(/Users/user/Desktop/firstProject/public/banner.svg);
+    background-image: url(/Users/user/Desktop/firstProject/public/css/banner.svg);
     background-size: cover;
 }
 
@@ -209,6 +209,195 @@ p {
     width: 200px;
     height: 130px;
     flex-shrink: 0;
+}
+
+.allMessages {
+    width: 100%;
+    height: 969px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.feed {
+    width: 360px;
+    height: 916px;
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post {
+    /* display: flex; */
+    /* align-content: center; */
+    /* flex-direction: column; */
+    width: 328px;
+    height: 135px;
+    flex-shrink: 0;
+    /* border: 2px solid yellowgreen; */
+    margin: 16px;
+    /* margin-top: 16px; */
+}
+
+.two {
+    width: 328px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.three {
+    width: 328px;
+    height: 315px;
+    flex-shrink: 0;
+}
+
+.four {
+    width: 326px;
+    height: 227px;
+    flex-shrink: 0;
+}
+
+h2 {
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 8px;
+    position: relative;
+    right: 100px;
+}
+
+.ellipse {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    fill: #C4C4C4;
+}
+
+.avatar {
+    float: left;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: url(public/Ellipse1.png) lightgray 50% / cover no-repeat;
+    border-radius: 30px;
+    margin-right: 12px;
+}
+
+.name {
+    width: 180px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 18px; /*128.571%*/
+    float: left;
+    /* border: 1px solid chocolate;  */
+}
+
+.nick {
+    color: #ABACB1;
+    font-weight: 400;
+}
+
+.hsbSent {
+    position: relative;
+    width: 52px;
+    height: 21px;
+    flex-shrink: 0;
+    color: #ABACB1;
+    text-align: right;
+    font-family: Lato;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    float: left;
+    top: -18px;
+    left: 28px;
+} 
+
+.text {
+    position: static;
+    width: 260px;
+    height: 82px;
+    flex-shrink: 0;
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* border: 1px solid seagreen; */
+    text-align: left;
+    float: left;
+}
+
+.reactions {
+    width: 205px;
+    height: 24px;
+    flex-shrink: 0;
+    /* border: 1px solid #ABACB1; */
+    margin-right: 55px;
+    float: right;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.replies {
+    display: flex;
+    align-items: center;
+}
+
+.numbers {
+    width: 20px;
+    height: 24px;
+    margin-left: 9px;
+    flex-shrink: 0;
+    color: #B1B1B1;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    text-align: left;
+}
+
+.Elon {
+    width: 260px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.photoPingPong {
+    float: right;
+    margin-top: 9px;
+}
+
+.Mia {
+    width: 260px;
+    height: 145px;
+    flex-shrink: 0;
+    float: right
+}
+
+.Line {
+    width: 412px;
+    min-height: 1px;
+    background: #E9E9E9;
 }
 
 };
