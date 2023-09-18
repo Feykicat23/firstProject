@@ -1,0 +1,119 @@
+@media only screen and (min-width: 1280px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Lato;
+        width: auto;
+        /* width: 1280px;
+        height: 2260px; */
+        background: #F4F5F7;
+    }
+    
+    .banner {
+        width: 1280px;
+        height: 640px;
+        flex-shrink: 0;
+        margin: auto;
+    }
+    
+    .bannedContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 640px;
+        height: 640px;
+        flex-shrink: 0;
+       
+    }
+
+    .Vector {
+        width: 42px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+    
+    .Group28 {
+        width: 410px;
+        height: 460px;
+        flex-shrink: 0;
+        margin-top: 60px;
+    }
+    
+    h1 {
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18);
+        font-family: Lato;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        width: 405px;
+    }
+
+    button {
+        border-radius: 10px;
+    }
+    
+    .registration {
+        width: 260px;
+        height: 52px;
+        border: 1px solid #0057FF;
+        background: #0057FF;
+        color: #FFF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Container {
+        /* width: 960px; */
+        display: flex;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+   
+    .logIn {
+        margin-top: 16px;
+        width: 260px;
+        height: 52px;
+        flex-shrink: 0;
+        border: 1px solid #0057FF;
+        color: #0057FF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 400;
+        background-color: #FFF;
+    }
+
+    .background {
+        width: 640px;
+        height: 640px;
+        flex-shrink: 0;
+    }
+    
+    .cover {
+        width: 640px;
+        height: 640px;
+        flex-shrink: 0;
+        background-image: url(/Users/user/Desktop/firstProject/public/css/dekstopbanner.svg);
+        background-size: cover;
+    }
+    
+    .rectangle21 {
+        width: 640px;
+        height: 640px;
+        flex-shrink: 0;
+    }
+
+};
