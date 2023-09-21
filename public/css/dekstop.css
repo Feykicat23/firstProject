@@ -116,4 +116,242 @@
         flex-shrink: 0;
     }
 
+    .statistics {
+        display: flex;
+        justify-content: space-around;
+        /* flex-direction:row; */
+        align-items: center;
+        width: 970px;
+        height: 185px;
+        flex-shrink: 0;
+        background: #0057FF;
+        padding-top: 20px;
+        margin: auto;
+    }
+    
+    .num {
+        color: #FFF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    
+    .small {
+        margin-top: 12.5px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .Group {
+        width: 200px;
+        height: 146px;
+        flex-shrink: 0;
+    }
+
+    h2 {
+        width: 960px;
+        color: #000;
+        font-family: Lato;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-align: left;
+        padding-bottom: 14px;
+    }
+
+    .allMessages {
+        display: flex;
+        flex-direction: column;
+        width: 633px;
+        height: 988px;
+        flex-shrink: 0;
+        margin: auto
+    }
+
+    .feed {
+        width: 632px;
+        height: 921px;
+        flex-shrink: 0;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
+        margin: auto;
+    }
+    
+
+    .post {
+        /* width: 632px; */
+        /* height: 114px; */
+        flex-shrink: 0;
+        padding: 16px;
+    }
+    
+    /* .two {
+        height: 114px;
+    } */
+    
+    /* .three {
+        height: 489px;
+    }
+     */
+    /* .four {
+        width: 632px;
+        height: 186px;
+        flex-shrink: 0;
+    } */
+    
+    .ellipse {
+        flex-shrink: 0;
+        fill: #C4C4C4;
+    }
+    
+    .avatar {
+        float: left;
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        background: url(public/Ellipse1.png) lightgray 50% / cover no-repeat;
+        border-radius: 30px;
+        margin-right: 12px;
+    }
+    
+    .name {
+        /* width: 77px; */
+        height: 24px;
+        color: #1D1E22;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 24px; /* 150% */
+        float: left;
+        padding-right: 14px;
+    }
+    
+    .nick {
+        width: 152.665px;
+        height: 24px;
+        flex-shrink: 0;
+        color: #ABACB1;
+        font-weight: 400;
+    }
+    
+    .hsbSent {
+        position: relative;
+        width: 126px;
+        height: 24px;
+        flex-shrink: 0;
+        color: #ABACB1;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        float: right;
+        left: 40px;
+    } 
+    
+    .text {
+        width: 520px;
+        /* height: 22px; */
+        flex-shrink: 0;
+        color: #1D1E22;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+        float: left;
+    }
+    
+    .reactions {
+        display: flex;
+        width: 524px;
+        height: 24px;
+        float: right;
+        left: 50px;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        width: 269px;
+        margin-top: 8px;
+        flex-shrink: 0;
+        /* border: 1px solid blanchedalmond; */
+    }
+
+    
+    .replies {
+        display: flex;
+        align-items: center;
+    }
+    
+    .numbers {
+        width: 20px;
+        height: 24px;
+        margin-left: 9px;
+        flex-shrink: 0;
+        color: #B1B1B1;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        text-align: left;
+    }
+    
+    .Elon {
+        width: 260px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+    
+    .photoPingPong {
+        position: relative;
+        right: 8px;
+        display: flex;
+        margin-top: 12px;
+        float: right;
+        width: 520px;
+        height: 342px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: url(/Users/user/Desktop/firstProject/public/css/deks.ping-pong.svg), lightgray 50% / cover no-repeat;
+    }
+    
+    .Mia {
+        width: 520px;
+        height: 98px;
+        flex-shrink: 0;
+        /* color: #FFFFFF00; */
+    }
+    
+    .Line {
+        width: auto;
+        min-height: 1px;
+        background: #E9E9E9;
+    }
+    
+    .aside {
+        width: 312px;
+        height: 559px;
+        flex-shrink: 0;
+        border: 1px solid green;
+        padding: 16px;
+        padding-top: 58px;
+    }
+
+
 };
+
