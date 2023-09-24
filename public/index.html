@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- <script crossorigin src="/assets/index.js" type="module"></script> -->
 </head>
-<body>
+<body id="bodyScrolling">
     <div class="banner">
 
         <div class="bannedContent">
@@ -27,12 +27,12 @@
 
               <div class="buttons">
             
-                    <button class="registration">
-                        <label for="registration">Registration</label>
+                    <button id="openModal1" class="registration">
+                        Sign up
                     </button>
 
-                    <button class="logIn">
-                        <label for="Log in">Log in</label>
+                    <button id="openModal2" class="logIn">
+                        Log in
                     </button>
 
               </div>
@@ -63,6 +63,7 @@
         </div> 
     </div>
 
+<div class="Container">
     <div class="allMessages">
         <h2>Last messages</h2>
     
@@ -149,7 +150,7 @@
     
                 <div class="post three">
                     <div class="avatar">
-                        <img src="/Users/user/Desktop/firstProject/public/css/image7.svg" alt="Alexander">
+                        <img src="/Users/user/Desktop/firstProject/public/css/image7.svg" alt="Alexander" class="avatar">
                     </div>
                     <div class="name">Alexander</div>
                     <div class="name nick">@sportsru</div>
@@ -190,7 +191,7 @@
                 
                 <div class="post four">
                     <div class="avatar">
-                        <img src="/Users/user/Desktop/firstProject/public/css/image8.svg" alt="Mia">
+                        <img src="/Users/user/Desktop/firstProject/public/css/image8.svg" alt="Mia" class="avatar">
                     </div>
                     <div class="name">Mia Wallace</div>
                     <div class="name nick">@mia</div>
@@ -225,10 +226,26 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+    </div>
 
-    
+   <footer>
+        <div class="content">
+            <h3>Sign up and be the first to learn about everything</h3>
+                <div class="buttonsFooter">
+
+                    <button id="openModal1" class="registration registrationFooter">
+                        Sign up
+                    </button>
+
+                    <button id="openModal2" class="logIn logInFooter">
+                        Log in
+                    </button>
+                    
+                </div>
+        </div>
+    </footer>
+ 
 </body>
 </html>
 
