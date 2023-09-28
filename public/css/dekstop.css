@@ -353,5 +353,71 @@
     }
 
 
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-shrink: 0;
+        background: linear-gradient(0deg, #F4F5F6 21.87%, rgba(244, 245, 246, 0.00) 100%);;
+    }
+
+    .content {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 1280px;
+    }
+
+    .buttonsFooter {
+        display: flex;
+        width: 536px;
+        height: 52px;
+        flex-shrink: 0;
+        margin-top: 32px;
+        
+    }
+
+    h3 {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        max-width: 641px;
+        font: 900 48px Lato;
+        color: black;
+        text-align: center;
+    }
+    
+    .registrationFooter {
+        margin: 0px 15px 10px 0px;
+        width: 260px;
+        height: 52px;
+        flex-shrink: 0;
+        background: #0057FF;
+        color: #FFFFFF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .logInFooter {
+        margin: 0px 0px 10px 15px;
+        width: 260px;
+        height: 52px;
+        flex-shrink: 0;
+        color: #0057FF;
+        border-color: #0057FF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
 };
 
