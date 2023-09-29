@@ -21,7 +21,7 @@
             <div class="background">
             <div class="Group28"> 
 
-              <img class="Vector" src="/Users/user/Desktop/firstProject/public/css/Vector1.svg" alt="Vector">
+              <img class="Vector" src="./css/Vector1.svg" alt="Vector">
               
               <h1>Stay in touch with friends, even when they are not around</h1>
 
@@ -48,17 +48,17 @@
 
     <div class='statistics'>
         <div class="Group 27"> 
-             <p class="num">20</p>
+             <p id="users" class="num">...</p>
              <p class="num small">Users are registered</p>
         </div> 
 
         <div class="Group 26">
-             <p class="num">556</p>
+             <p id="messages" class="num">...</p>
              <p class="num small">Messages are written</p>
         </div> 
 
         <div class="Group 25">
-             <p class="num">58</p>
+             <p id="todayMessages" class="num">...</p>
              <p class="num small">Written today</p>
         </div> 
     </div>
@@ -70,13 +70,13 @@
             <div class="feed">
             <div class="post one">
             <div class="avatar">
-            <img src="/Users/user/Desktop/firstProject/public/css/image9.svg" alt="Vega" class="avatar">
+            <img src="./css/image9.svg" alt="Vega" class="avatar">
             </div>
     
             <div class="name">Vincent Vega</div> 
                 <div class="name nick">@roizmangbn</div>
                  <p class="hsbSent">28 minutes ago</p>
-                <p class="text">У них там все немного не так. В смысле, у них там все точно так же, как и здесь, только немного по-другому.</p>
+                <p class="text">Things are a little different for them there. I mean, they have it exactly the same as here, just a little different.</p>
                             
     
                     <div class="reactions">
@@ -110,7 +110,7 @@
     
             <div class="post two">
             <div class="avatar">
-                <img src="/Users/user/Desktop/firstProject/public/css/image5.svg" alt="Elon Mask" class="avatar">
+                <img src="./css/image5.svg" alt="Elon Mask" class="avatar">
             </div>
                 <div class="name">Elon Mask</div>
                 <div class="name nick">@elonmusk</div>
@@ -150,13 +150,13 @@
     
                 <div class="post three">
                     <div class="avatar">
-                        <img src="/Users/user/Desktop/firstProject/public/css/image7.svg" alt="Alexander" class="avatar">
+                        <img src="./css/image7.svg" alt="Alexander" class="avatar">
                     </div>
                     <div class="name">Alexander</div>
                     <div class="name nick">@sportsru</div>
                         <p class="hsbSent">2 hours ago</p>
-                        <p class="text">Прикладываю фотки с последнего матча. С каждым днем играю все лучше. Еще пару лет и можно на Олимпиаду ехать!</p>
-                            <img src="/Users/user/Desktop/firstProject/public/css/image6.svg" alt="ping-pong" class = 'photoPingPong'>
+                        <p class="text">I attach photos from the last match. I'm playing better every day. A couple more years and you can go to the Olympics!</p>
+                            <img src="./css/image6.svg" alt="ping-pong" class = 'photoPingPong'>
     
     
     
@@ -191,12 +191,12 @@
                 
                 <div class="post four">
                     <div class="avatar">
-                        <img src="/Users/user/Desktop/firstProject/public/css/image8.svg" alt="Mia" class="avatar">
+                        <img src="./css/image8.svg" alt="Mia" class="avatar">
                     </div>
                     <div class="name">Mia Wallace</div>
                     <div class="name nick">@mia</div>
                     <p class="hsbSent">1 day ago</p>
-                    <p class="text Mia">Идут по улице три помидора: папа-помидор, мама-помидор и ребенок-помидор. Ребенок-помидор начинает отставать. Папа-помидор разозлился, подбегает к ребенку-помидору, раздавливает всмятку... и говорит: «Догоняй, кетчуп!»</p>
+                    <p class="text Mia">Here are three tomatoes walking down the street: dad is a tomato, mom is a tomato and a child is a tomato. The tomato child begins to lag behind. The tomato dad gets angry, runs up to the tomato child, crushes the soft-boiled... and says: "Catch up, ketchup!"</p>
     
     
                     <div class="reactions">
@@ -226,8 +226,71 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="aside">
+                <div class="rightBar Trends">
+                    <h4>Current topics</h4>
+                        <div class="trends">
+                            <p class="top">#javascript</p>
+                            <p class="bottom">22 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top">#python3</p>
+                            <p class="bottom">33 041 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top">#Go</p>
+                            <p class="bottom">17 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top">#How_to_write_good_code?</p>
+                            <p class="bottom">232 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top">#PLEASE_SOS!_Help_with_code</p>
+                            <p class="bottom">2 424 941 messages</p>
+                        </div>
+                </div>
+
+                <div class="rightBar Users">
+                    <h5>Interesting groups</h5>
+                    
+                        <div class="user">
+                            <div class="avatarOfUser" style="background: url(./css/user1.svg), lightgray 50% / cover no-repeat;"></div>
+
+                                <div class="title">
+                                <p class="top">Habr.Science</p>
+                                <p class="bottom">@habr_popsci</p>
+                                </div>
+                                    <div class="readButton">Read</div>
+                        </div>
+
+                        <div class="user">
+                            <div class="avatarOfUser"  style="background: url(./css/user2.svg), lightgray 50% / cover no-repeat;"></div>
+
+                                <div class="title">
+                                <p class="top">MatchTV</p>
+                                <p class="bottom">@MatchTV</p>
+                                </div>
+                                    <div class="readButton">Read</div>
+                        </div>
+
+                        <div class="user">
+                            <div class="avatarOfUser"  style="background: url(./css/user3.svg), lightgray 50% / cover no-repeat;"></div>
+
+                                <div class="title">
+                                <p class="top">PopMechanica</p>
+                                <p class="bottom">@PopMechanica</p>
+                                </div>
+                                    <div class="readButton">Read</div>
+                        </div>
+                </div>
+            </div>
     </div>
+</div>
+
+    
+        
 
    <footer>
         <div class="content">
@@ -245,7 +308,96 @@
                 </div>
         </div>
     </footer>
+
  
+           
+    <div id="MyModule1" class="regPopup" style="visibility: visible;
+    opacity: 1;"> 
+        <div class="modal">
+             <div class="regModal">
+
+                <div class="contain">
+                    <div id="stick1" class="stick"></div>
+                    </div>
+
+                <form id="formRegistation" class="formRegistation" action="#">
+                
+                    <div class="formName">Registration
+
+                        <div id="closeModal1" class="handler"></div>
+                    </div>
+
+                    <label class="form">
+                        <p class="symbols">Write your login</p>
+                        <input type="text" class="loginForm" placeholder="Login">
+            
+                    </label>
+
+                    <label class="form">
+                        <p class="symbols">Enter your email</p>
+                        <input type="text" class="mailForm" placeholder="Mail">
+                        
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Create a password</p>
+                        <input type="text" class="passForm" placeholder="Password">
+                        
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Repeat your password</p>
+                        <input type="text" class="passForm" placeholder="Password confirmation">
+                        
+                    </label>
+
+                    <button type="submit" class="registration inputReg">
+                        Sign up
+                    </button>
+                </form>
+             </div>
+    
+        </div>
+    </div>
+
+    <div id="MyModule2" class="regPopup" style="visibility: visible;
+    opacity: 0;"> 
+        <div class="modal"">
+             <div class="regModal">
+
+                        <div class="contain">
+                        <div id="stick" class="stick"></div>
+                        </div>
+                    
+                <form id="formAuthorization" class="formAuthorization" action="#">
+
+                    <div class="formName Authorization">Authorization
+            
+                        <div id="closeModal2" class="handler"></div>
+                    </div>
+
+                    <label class="form">
+                        <p class="symbols">Email</p>
+                        <input id="mailForm" type="text" class="mailForm" placeholder="Mail">
+                    
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Password</p>
+                        <input type="text" class="passForm" placeholder="Password">
+                        
+                    </label>
+
+                    <button type="submit" id="openModal2" class="logIn" style="width: 362px; margin-top: 0px;">
+                        Log in
+                    </button>
+                </form>
+             </div>
+
+        </div>
+    </div>
+
+   
 </body>
 </html>
 
