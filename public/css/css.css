@@ -35,7 +35,7 @@
 
 .cover {
     height: 225px;
-    background-image: url(/Users/user/Desktop/firstProject/public/css/banner.svg);
+    background-image: url(./banner.svg);
     background-size: cover;
 }
 
@@ -121,7 +121,7 @@ button {
     background-color: white;
 }
 
-label {
+button {
     left: 0%;
     right: 0%;
     top: 28.85%;
@@ -213,7 +213,6 @@ p {
 
 .allMessages {
     width: 100%;
-    height: 969px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -223,7 +222,7 @@ p {
 
 .feed {
     width: 360px;
-    height: 916px;
+    /* height: 916px; */
     flex-shrink: 0;
     display: flex;
     align-content: center;
@@ -232,15 +231,10 @@ p {
 }
 
 .post {
-    /* display: flex; */
-    /* align-content: center; */
-    /* flex-direction: column; */
     width: 328px;
     height: 135px;
     flex-shrink: 0;
-    /* border: 2px solid yellowgreen; */
-    margin: 16px;
-    /* margin-top: 16px; */
+    margin: 16px 21px 24px;
 }
 
 .two {
@@ -285,7 +279,7 @@ h2 {
     width: 52px;
     height: 52px;
     flex-shrink: 0;
-    background: url(public/Ellipse1.png) lightgray 50% / cover no-repeat;
+    /* background: url(public/Ellipse1.png) lightgray 50% / cover no-repeat; */
     border-radius: 30px;
     margin-right: 12px;
 }
@@ -355,6 +349,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .replies {
@@ -398,6 +393,174 @@ h2 {
     width: 412px;
     min-height: 1px;
     background: #E9E9E9;
+} 
+
+/* Footer */
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 329px;
+    height: 258px;
+    margin-bottom: 36px;
+}
+
+.buttonsFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 328px;
+    height: 120px;
+}
+
+h3 {
+    height: 114px;
+    color: #000;
+    text-align: center;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+/* Modals */
+
+.regPopup {
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    top: 0;
+    left: 0;
+    /* transition: opacity .4s, visibility .4s; */
+}
+
+.modal {
+    width: 100%;
+    border-radius: 25px;
+    background: white;
+    padding: 16px 17px;
+}
+/* 
+.regPopup.open {
+    opacity: 1;
+    visibility: visible;
+} */
+
+.contain {
+    display: flex;
+    justify-content: center;
+}
+
+.stick {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #ABACB1;
+}
+
+.closeWindow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.formName {
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 28px; /* 116.667% */
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 330px;
+    height: 408px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.form {
+    width: 328px;
+    height: 52px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.symbols {
+    position: absolute;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    left: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.error {
+    text-align: left;
+    color: #E40060;
+    font-family: Lato;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input {
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    /* margin-bottom: 24px; */
+    min-width: 100%;
+}
+
+.inputReg {
+    width: 362px;
+    padding: 15px 16px;
+}
+
+.formAuthorization {
+    width: 100%;
+    height: 290px;
+    margin-top: 5px;
+}
+
+
+.padding {
+    padding-left: 15px
+}
+
+.red {
+    border-radius: 10px;
+    border: 1px solid #FF97C3;
+    background: #FFDEEC;
+}
+
+.aside {
+    display: none;
 }
 
 };
