@@ -67,12 +67,14 @@
     <div class="allMessages">
         <h2>Last messages</h2>
     
-            <div class="feed">
+        <div class="feed">
+
+        <div class="post one" id="post1">
             <div class="post one">
             <div class="avatar">
             <img src="./css/image9.svg" alt="Vega" class="avatar">
             </div>
-    
+       
             <div class="name">Vincent Vega</div> 
                 <div class="name nick">@roizmangbn</div>
                  <p class="hsbSent">28 minutes ago</p>
@@ -105,10 +107,11 @@
                         </div>
                     </div>
                 </div>
-    
+        </div>
+        
             <div class="Line"></div>
     
-            <div class="post two">
+        <div class="post two" id="post2">
             <div class="avatar">
                 <img src="./css/image5.svg" alt="Elon Mask" class="avatar">
             </div>
@@ -148,7 +151,7 @@
     
                 <div class="Line"></div>
     
-                <div class="post three">
+                <div class="post three" id="post3">
                     <div class="avatar">
                         <img src="./css/image7.svg" alt="Alexander" class="avatar">
                     </div>
@@ -189,7 +192,7 @@
     
                 <div class="Line"></div>    
                 
-                <div class="post four">
+                <div class="post four" id="post4">
                     <div class="avatar">
                         <img src="./css/image8.svg" alt="Mia" class="avatar">
                     </div>
@@ -311,8 +314,8 @@
 
  
            
-    <div id="MyModule1" class="regPopup" style="visibility: visible;
-    opacity: 1;"> 
+    <div id="MyModule1" class="regPopup" style="visibility: hidden;
+    opacity: 0;"> 
         <div class="modal">
              <div class="regModal">
 
@@ -360,7 +363,7 @@
         </div>
     </div>
 
-    <div id="MyModule2" class="regPopup" style="visibility: visible;
+    <div id="MyModule2" class="regPopup" style="visibility: hidden;
     opacity: 0;"> 
         <div class="modal"">
              <div class="regModal">
@@ -397,6 +400,7 @@
         </div>
     </div>
 
+    <script type="module" src="./assets/popups.js"></script>
    
 </body>
 </html>
