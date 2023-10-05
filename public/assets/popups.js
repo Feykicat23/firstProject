@@ -54,3 +54,126 @@ window.addEventListener('click', (event) => {
     }
 });
 
+       /// Validation 
+
+       let allInputs;
+
+       function removeError(input) {
+           const parent = input.parentNode;
+           const errorElement = parent.querySelector('.error', '.input');
+           
+           if (errorElement) {
+               errorElement.remove();
+               input.classList.remove('red');
+           }
+       }
+       
+       function createError(input, text) {
+           const parent = input.parentNode;
+           const errorLabel = document.createElement('p');
+       
+           errorLabel.classList.add('error', 'padding');
+           errorLabel.textContent = text;
+       
+           parent.classList.add('error');
+           
+           input.classList.add('red');
+       
+           parent.append(errorLabel);
+       }
+       
+       function validationRegistration(form) {
+           let mailFormInput = document.querySelector('.mailForm').value;
+           allInputs = form.querySelectorAll('input');
+       
+           let result = true;
+       
+           allInputs.forEach((input, i) => {
+               removeError(input);
+           
+               if (input.value === '') {
+                   console.log("Ошибка поля");
+                   createError(input, 'Write something!');
+                   result = false;
+                   return; // Используйте return вместо continue, чтобы выйти из forEach при ошибке.
+               }
+           
+               if (i === 1 && !isAValidMail(mailFormInput)) {
+                   console.log("Ошибка поля");
+                   createError(input, 'Address is not valid.');
+                   result = false;
+                   return;
+               }
+           
+               if (i === 3 && allInputs[2].value !== allInputs[3].value) {
+                   console.log("Ошибка поля");
+                   createError(input, 'Passwords mismatch');
+                   result = false;
+                   return;
+               }
+           });
+           
+       
+           return result;
+       }
+       
+       document.getElementById('formRegistation').addEventListener('submit', function(event) {
+           event.preventDefault();
+       
+           if (validationRegistration(this)) {
+               alert('Форма отправлена');
+       
+               const person = {
+                   login: allInputs[0].value,
+                   email: allInputs[1].value,
+                   password: allInputs[2].value,
+                 };
+       
+               console.log(person)
+           }
+       });
+       
+       function validationLogIn(form) {
+           let mailFormInput = document.getElementById('mailForm').value;
+           allInputs = form.querySelectorAll('input');
+       
+           let result = true;
+       
+           allInputs.forEach((input, i) => {
+               removeError(input);
+           
+               if (input.value === '') {
+                   console.log("Ошибка поля");
+                   createError(input, 'Write something!');
+                   result = false;
+                   return;
+               }
+           
+               if (i == 0 && !isAValidMail(mailFormInput)) {
+                   console.log(mailFormInput)
+                   console.log("Ошибка поля");
+                   createError(input, 'Address is not valid.');
+                   result = false;
+                   return;
+               }
+           
+           });
+           
+           return result;
+       }
+       
+       document.getElementById('formAuthorization').addEventListener('submit', function(event) {
+           event.preventDefault();
+       
+           if (validationLogIn(this)) {
+               alert('Форма отправлена');
+       
+               const logIn = {
+                   email: allInputs[0].value,
+                   password: allInputs[1].value,
+                 };
+       
+               console.log(logIn)
+           }
+       });
+       
