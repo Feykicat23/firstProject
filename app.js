@@ -4,7 +4,7 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-const html = fs.readFileSync('public/main.html', 'utf8');
+const html = fs.readFileSync('public/index.html', 'utf8');
 
 app.use(express.static('public'));
 
