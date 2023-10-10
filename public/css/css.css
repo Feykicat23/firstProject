@@ -1,51 +1,42 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
-  
+
   /* Мобильные стили */
   @media only screen and (max-width: 412px) {
   body {
-        /* background-color: #F09A9D; */
         display: flex;
-        justify-content: center;
+        font-family: Lato;
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
         margin: 0 auto;
+        background: #FFF;
+        height: 100vh;
+        width: 100vw;
     }
 
 .banner {
-    /* position: absolute; */
     display: flex;
     width: 100%;
-    height: 528px;
-    left: 0px;
-    top: 0px;
+    height: 545px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: 0;
     }
 
 .bannedContent {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 528px;
-    left: 0px;
-    top: 0px;
     flex-direction: column;
 }
 
 .cover {
-    /* position: absolute; */
-    display: flex;
-    width: 100%;
-    height: 160px;
-    left: 0px;
-    top: 368px;
-    flex-direction: column;
+    height: 225px;
+    background-image: url(./banner.svg);
+    background-size: cover;
 }
 
 .rectangle21 {
@@ -59,7 +50,6 @@
 }
 
 .background {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 368px;
@@ -69,11 +59,11 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 ;
+    padding-bottom: 18px;
+    padding-top: 24px;
 }
 
 .Group28 {
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +76,6 @@
 }
 
 .buttons {
-    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -111,7 +100,6 @@
 
 button {
     box-sizing: border-box;
-    /* position: absolute; */
     display: flex;
     left: 0%;
     right: 0%;
@@ -122,7 +110,6 @@ button {
 }
 
 .logIn {
-    /* position: absolute; */
     display: flex;
     width: 328px;
     height: 52px;
@@ -134,8 +121,7 @@ button {
     background-color: white;
 }
 
-label {
-    /* position: absolute; */
+button {
     left: 0%;
     right: 0%;
     top: 28.85%;
@@ -145,19 +131,40 @@ label {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
     text-align: center;
     }
 
 /* Stay in touch
 with friends even when they are not around */
-p {
-    /* position: absolute; */
-    display: flex;
+h1 {
     width: 328px;
     height: 116px;
     left: 16px;
     top: 84px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #000000;
+}
+
+.rectangle21 {
+    width: 300px;
+}
+
+.photo {
+    width: 100vw;
+    height: 203px;
+    flex-shrink: 0;
+}
+
+p {
+    width: 328px;
+    height: 116px;
     text-align: center;
     font-family: 'Lato';
     font-style: normal;
@@ -168,10 +175,20 @@ p {
     color: #000000;
 }
 
-
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 457px;
+    flex-shrink: 0;
+    background: #0057FF;
+    padding-top: 20px;
+    margin-bottom: 37px;
 }
-  
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 .photo {
@@ -206,6 +223,8 @@ p {
     margin-bottom: 37px;
 }
 
+=======
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
 .num {
     color: #FFF;
     text-align: center;
@@ -339,10 +358,16 @@ h2 {
 } 
 
 .text {
+<<<<<<< HEAD
     display: inline;
     /* position: static; */
     width: 260px; 
     /* height: 82px; */
+=======
+    position: static;
+    width: 260px;
+    height: 82px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
     flex-shrink: 0;
     color: #1D1E22;
     font-family: Lato;
@@ -397,9 +422,12 @@ h2 {
 }
 
 .photoPingPong {
+<<<<<<< HEAD
     width: 260px;
     height: 171px;
     flex-shrink: 0;
+=======
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
     float: right;
     margin-top: 9px;
 }
@@ -585,6 +613,7 @@ input {
     display: none;
 }
 
+<<<<<<< HEAD
 .color-grey {
     background-color: lightgray;
     color: lightgray;
@@ -593,3 +622,6 @@ input {
 
 };
 >>>>>>> Stashed changes
+=======
+};
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35

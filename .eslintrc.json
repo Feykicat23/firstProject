@@ -8,17 +8,14 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
+    
   },
   "rules": {
     "import/extensions": ["error", "ignorePackages", {"js": "always"}],
     "prefer-arrow-callback": 0,
     "mocha/prefer-arrow-callback": 2,
-<<<<<<< Updated upstream
-    "linebreak-style": 0
-=======
     "linebreak-style": 0,
     "allowForLoopAfterthoughts": 0
->>>>>>> Stashed changes
   },
   "extends": ["airbnb", "plugin:mocha/recommended"],
   "plugins": [

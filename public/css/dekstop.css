@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @media only screen and (min-width: 1280px) {
+=======
+/* @media only screen and (min-width: 1280px) { */
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
 
     * {
         margin: 0;
@@ -40,7 +44,11 @@
         width: 410px;
         height: 460px;
         flex-shrink: 0;
+<<<<<<< HEAD
         margin: 55px 0px 0px 30px
+=======
+        margin-top: 60px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
     }
     
     h1 {
@@ -167,14 +175,22 @@
         /* display: flex;
         flex-direction: column; */
         width: 960px;
+<<<<<<< HEAD
         /* height: 965px; */
+=======
+        height: 988px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         flex-shrink: 0;
         margin: auto
     }
 
     .feed {
         width: 632px;
+<<<<<<< HEAD
         /* height: 921px; */
+=======
+        height: 921px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         flex-shrink: 0;
         flex-shrink: 0;
         display: flex;
@@ -246,8 +262,13 @@
     } 
     
     .text {
+<<<<<<< HEAD
         display: inline;
         width: 520px;
+=======
+        width: 520px;
+        /* height: 22px; */
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         flex-shrink: 0;
         color: #1D1E22;
         font-family: Lato;
@@ -256,7 +277,11 @@
         font-weight: 400;
         line-height: normal;
         text-align: left;
+<<<<<<< HEAD
         padding-top: 10px;
+=======
+        padding-top: 5px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         float: left;
     }
     
@@ -275,7 +300,10 @@
         width: 269px;
         margin-top: 8px;
         flex-shrink: 0;
+<<<<<<< HEAD
         /* padding-bottom: 8px; */
+=======
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         /* border: 1px solid blanchedalmond; */
     }
 
@@ -380,7 +408,11 @@
         line-height: 20px; /* 125% */
     }
 
+<<<<<<< HEAD
     .bottom, .nickGroup {
+=======
+    .bottom {
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         color: #ABACB1;
         font-family: Lato;
         font-size: 10px;
@@ -429,8 +461,13 @@
     .readButton {
         color: #0057FF;
         text-align: center;
+<<<<<<< HEAD
         font-family: Lato;
         font-size: 14px;
+=======
+        font-family: Roboto;
+        font-size: 10px;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         font-style: normal;
         font-weight: 500;
         line-height: 14px; /* 140% */
@@ -447,16 +484,25 @@
     /* Подвал сайта */
 
     footer {
+<<<<<<< HEAD
         /* display: flex; */
         /* justify-content: center;
         align-items: flex-end; */
+=======
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         flex-shrink: 0;
         background: linear-gradient(0deg, #F4F5F6 21.87%, rgba(244, 245, 246, 0.00) 100%);;
     }
 
     .content {
+<<<<<<< HEAD
         padding-top: 35px;
         margin-bottom: 50px;
+=======
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -639,6 +685,7 @@ input {
     background: #FFDEEC;
 }
 
+<<<<<<< HEAD
 .color-grey {
     background-color: lightgray;
     border: 0px solid lightgray;
@@ -660,3 +707,7 @@ input {
 
 
 };
+=======
+/* }; */
+
+>>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
