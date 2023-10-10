@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en rus">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphin.Social_Network</title>
+    <link rel="icon" href="/public/css/Vector1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/dekstop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- <script crossorigin src="/assets/index.js" type="module"></script> -->
+</head>
+<body id="bodyScrolling">
+    <div class="banner">
+
+        <div class="bannedContent">
+            <div class="background">
+            <div class="Group28"> 
+
+              <img class="Vector" src="./css/Vector1.svg" alt="Vector">
+              
+              <h1>Stay in touch with friends, even when they are not around</h1>
+
+              <div class="buttons">
+            
+                    <button id="openModal1" class="registration">
+                        Sign up
+                    </button>
+
+                    <button id="openModal2" class="logIn">
+                        Log in
+                    </button>
+
+              </div>
+
+            </div>
+            </div>
+
+            <div class="cover">
+            </div>
+
+        </div>
+    </div>
+
+    <div class='statistics'>
+        <div class="Group 27"> 
+             <p id="users" class="num">...</p>
+             <p class="num small">Users are registered</p>
+        </div> 
+
+        <div class="Group 26">
+             <p id="messages" class="num">...</p>
+             <p class="num small">Messages are written</p>
+        </div> 
+
+        <div class="Group 25">
+             <p id="todayMessages" class="num">...</p>
+             <p class="num small">Written today</p>
+        </div> 
+    </div>
+
+<div class="Container">
+    <div class="allMessages">
+        <h2>Last messages</h2>
+    
+        <div class="feed">
+
+        <div class="post one loading" id="post1">
+            <div class="avatar color-grey">
+            <img src="./css/grey-avatar.svg" alt="">
+            </div>
+       
+            <div class="name color-grey">Vincent Vega</div> 
+                <div class="name nick color-grey">@roizmangbn</div>
+                 <!-- <p class="hsbSent color-grey">28 minutes ago</p> -->
+                <p class="text color-grey">Things are a little different for them there. I mean, they have it exactly the</p>
+                            
+    
+                    <!-- <div class="reactions">
+                        <div class="container">
+                        
+                        <div class="replies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M4.6875 2.8125L1.40625 6.5625M1.40625 6.5625L4.6875 10.3125M1.40625 6.5625H8.4375C12.1875 6.5625 14.0625 8.4375 14.0625 12.1875" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="numbers">91</p>
+                        </div>
+        
+                        <div class="replies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M1.875 7.50002C0.46875 5.62502 0.9375 2.81252 3.28125 1.87502C5.625 0.937515 7.03125 2.81252 7.5 3.75002C7.96875 2.81252 9.84375 0.937515 12.1875 1.87502C14.5312 2.81252 14.5312 5.62502 13.125 7.50002C11.7187 9.37502 7.5 13.125 7.5 13.125C7.5 13.125 3.28125 9.37502 1.875 7.50002Z" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="numbers">327</p>
+                        </div>
+        
+                        <div class="replies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M13.125 10.3125V14.0625H1.875V10.3125M7.5 1.875V11.25M7.5 1.875L3.75 5.625M7.5 1.875L11.25 5.625" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="numbers">103</p>
+                        </div>
+                        </div>
+                    </div> -->
+            
+        </div>
+        
+            <div class="Line"></div>
+    
+        <div class="post two" id="post2">
+            <div class="avatar color-grey">
+                <img src="./css/grey-avatar.svg" alt="">
+            </div>
+                <div class="name color-grey">Elon Mask</div>
+                <!-- <div class="name nick color-grey">@elonmusk</div> -->
+                        <!-- <p class="hsbSent">12 hours ago</p> -->
+                        <p class="text color-grey">Things are a little different for them there. I mean, they have it exactly the</p>
+                                    
+    
+                        <!-- <div class="reactions">
+                            <div class="container">
+                            
+                            <div class="replies">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path d="M4.6875 2.8125L1.40625 6.5625M1.40625 6.5625L4.6875 10.3125M1.40625 6.5625H8.4375C12.1875 6.5625 14.0625 8.4375 14.0625 12.1875" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="numbers">2134</p>
+                            </div>
+            
+                            <div class="replies">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path d="M1.875 7.50002C0.46875 5.62502 0.9375 2.81252 3.28125 1.87502C5.625 0.937515 7.03125 2.81252 7.5 3.75002C7.96875 2.81252 9.84375 0.937515 12.1875 1.87502C14.5312 2.81252 14.5312 5.62502 13.125 7.50002C11.7187 9.37502 7.5 13.125 7.5 13.125C7.5 13.125 3.28125 9.37502 1.875 7.50002Z" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="numbers">42435</p>
+                            </div>
+            
+                            <div class="replies">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path d="M13.125 10.3125V14.0625H1.875V10.3125M7.5 1.875V11.25M7.5 1.875L3.75 5.625M7.5 1.875L11.25 5.625" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="numbers">3244</p>
+                            </div>
+                            </div>
+                        </div> -->
+    
+                </div>
+    
+                <div class="Line"></div>
+    
+                <div class="post three" id="post3">
+                    <div class="avatar color-grey">
+                        <img src="./css/grey-avatar.svg" alt="">
+                        </div>
+                   
+                        <div class="name color-grey">Vincent Vega</div> 
+                            <div class="name nick color-grey">@roizmangbn</div>
+                             <!-- <p class="hsbSent color-grey">28 minutes ago</p> -->
+                            <p class="text color-grey">I attach photos from the last match. I'm playing better every day. A couple more years and you can go to the Olympics!</p>
+                                        
+                
+                                <!-- <div class="reactions">
+                                    <div class="container">
+                                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M4.6875 2.8125L1.40625 6.5625M1.40625 6.5625L4.6875 10.3125M1.40625 6.5625H8.4375C12.1875 6.5625 14.0625 8.4375 14.0625 12.1875" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">91</p>
+                                    </div>
+                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M1.875 7.50002C0.46875 5.62502 0.9375 2.81252 3.28125 1.87502C5.625 0.937515 7.03125 2.81252 7.5 3.75002C7.96875 2.81252 9.84375 0.937515 12.1875 1.87502C14.5312 2.81252 14.5312 5.62502 13.125 7.50002C11.7187 9.37502 7.5 13.125 7.5 13.125C7.5 13.125 3.28125 9.37502 1.875 7.50002Z" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">327</p>
+                                    </div>
+                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M13.125 10.3125V14.0625H1.875V10.3125M7.5 1.875V11.25M7.5 1.875L3.75 5.625M7.5 1.875L11.25 5.625" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">103</p>
+                                    </div>
+                                    </div>
+                                </div> -->
+                        
+                </div>
+    
+                <div class="Line"></div>    
+                
+                <div class="post four" id="post4">
+                    <div class="avatar color-grey">
+                        <img src="./css/grey-avatar.svg" alt="">
+                    </div>
+                        <div class="name color-grey">Elon Mask</div>
+                        <!-- <div class="name nick color-grey">@elonmusk</div> -->
+                                <!-- <p class="hsbSent">12 hours ago</p> -->
+                                <p class="text color-grey">Here are three tomatoes walking down the street: dad is a tomato, mom is a tomato and a child is a tomato. The tomato child begins to lag behind. The tomato dad gets angry, runs up to the tomato child, crushes the soft-boiled... and says: \"Catch up, ketchup!\</p>
+            
+                                <!-- <div class="reactions">
+                                    <div class="container">
+                                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M4.6875 2.8125L1.40625 6.5625M1.40625 6.5625L4.6875 10.3125M1.40625 6.5625H8.4375C12.1875 6.5625 14.0625 8.4375 14.0625 12.1875" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">2134</p>
+                                    </div>
+                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M1.875 7.50002C0.46875 5.62502 0.9375 2.81252 3.28125 1.87502C5.625 0.937515 7.03125 2.81252 7.5 3.75002C7.96875 2.81252 9.84375 0.937515 12.1875 1.87502C14.5312 2.81252 14.5312 5.62502 13.125 7.50002C11.7187 9.37502 7.5 13.125 7.5 13.125C7.5 13.125 3.28125 9.37502 1.875 7.50002Z" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">42435</p>
+                                    </div>
+                    
+                                    <div class="replies">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M13.125 10.3125V14.0625H1.875V10.3125M7.5 1.875V11.25M7.5 1.875L3.75 5.625M7.5 1.875L11.25 5.625" stroke="#ABACB1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="numbers">3244</p>
+                                    </div>
+                                    </div>
+                                </div> -->
+            
+                </div>
+            </div>
+
+            <div class="aside">
+                <div class="rightBar Trends">
+                    <h4>Current topics</h4>
+                        <div class="trends">
+                            <p class="top topic">javascript</p>
+                            <p class="bottom messagesTopic">22 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top topic">#python3</p>
+                            <p class="bottom messagesTopic">33 041 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top topic">#Go</p>
+                            <p class="bottom messagesTopic">17 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top topic">#How_to_write_good_code?</p>
+                            <p class="bottom messagesTopic">232 941 messages</p>
+                        </div>
+                        <div class="trends">
+                            <p class="top topic">#PLEASE_SOS!_Help_with_code</p>
+                            <p class="bottom messagesTopic">2 424 941 messages</p>
+                        </div>
+                </div>
+
+                <div class="rightBar Users">
+                    <h5>Interesting groups</h5>
+                    
+                        <div class="user">
+                            <div class="avatarOfUser color-grey">
+                                <img src="./css/grey-avatar.svg" alt="">
+                                </div>
+
+                                <div class="title">
+                                <p class="nameGroup color-grey">Habr.Science</p>
+                                <p class="nickGroup color-grey">@habr_popsci</p>
+                                </div>
+                                    <div class="readButton color-grey">Read</div>
+                        </div>
+
+                        <div class="user">
+                            <div class="avatarOfUser color-grey">
+                                <img src="./css/grey-avatar.svg" alt="">
+                                </div>
+
+                                <div class="title">
+                                <p class="nameGroup color-grey">MatchTV</p>
+                                <p class="nickGroup color-grey">@MatchTV</p>
+                                </div>
+                                    <div class="readButton color-grey">Read</div>
+                        </div>
+
+                        <div class="user">
+                            <div class="avatarOfUser color-grey">
+                                <img src="./css/grey-avatar.svg" alt="">
+                                </div>
+
+                                <div class="title">
+                                <p class="nameGroup color-grey">PopMechanica</p>
+                                <p class="nickGroup color-grey">@PopMechanica</p>
+                                </div>
+                                    <div class="readButton color-grey">Read</div>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+    
+        
+
+   <footer>
+        <div class="content">
+            <h3>Sign up and be the first to learn about everything</h3>
+                <div class="buttonsFooter">
+
+                    <button id="openModal1" class="registration registrationFooter">
+                        Sign up
+                    </button>
+
+                    <button id="openModal2" class="logIn logInFooter">
+                        Log in
+                    </button>
+                    
+                </div>
+        </div>
+    </footer>
+
+ 
+           
+    <div id="MyModule1" class="regPopup" style="visibility: hidden;
+    opacity: 0;"> 
+        <div class="modal">
+             <div class="regModal">
+
+                <div class="contain">
+                    <div id="stick1" class="stick"></div>
+                    </div>
+
+                <form id="formRegistation" class="formRegistation" action="#">
+                
+                    <div class="formName">Registration
+
+                        <div id="closeModal1" class="handler"></div>
+                    </div>
+
+                    <label class="form">
+                        <p class="symbols">Write your login</p>
+                        <input type="text" class="loginForm" placeholder="Login">
+            
+                    </label>
+
+                    <label class="form">
+                        <p class="symbols">Enter your email</p>
+                        <input type="text" class="mailForm" placeholder="Mail">
+                        
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Create a password</p>
+                        <input type="text" class="passForm" placeholder="Password">
+                        
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Repeat your password</p>
+                        <input type="text" class="passForm" placeholder="Password confirmation">
+                        
+                    </label>
+
+                    <button type="submit" class="registration inputReg">
+                        Sign up
+                    </button>
+                </form>
+             </div>
+    
+        </div>
+    </div>
+
+    <div id="MyModule2" class="regPopup" style="visibility: hidden;
+    opacity: 0;"> 
+        <div class="modal">
+             <div class="regModal">
+
+                        <div class="contain">
+                        <div id="stick" class="stick"></div>
+                        </div>
+                    
+                <form id="formAuthorization" class="formAuthorization" action="#">
+
+                    <div class="formName Authorization">Authorization
+            
+                        <div id="closeModal2" class="handler"></div>
+                    </div>
+
+                    <label class="form">
+                        <p class="symbols">Email</p>
+                        <input id="mailForm" type="text" class="mailForm" placeholder="Mail">
+                    
+                    </label>
+
+                    <label class="form"> 
+                        <p class="symbols">Password</p>
+                        <input type="text" class="passForm" placeholder="Password">
+                        
+                    </label>
+
+                    <button type="submit" id="openModal2" class="logIn" style="width: 362px; margin-top: 0px;">
+                        Log in
+                    </button>
+                </form>
+             </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="./assets/popups.js"></script>
+    <script type="module" src="./assets/postHbSent.js"></script>
+    <script type="module" src="./assets/validMail.js"></script>
+    <script type="module" src="./assets/fetch.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div class="container"></div>
+
+        <div class="container"></div>
+
+        <div class="container"></div>
+
+        <div class="container"></div>
+
+    <script>
+
+
+        function fetchMessagesData() {
+          return fetch('/public/data.json')
+            .then(response => response.json());
+        }
+
+       const buildStructure = (num) => {
+        const container = document.querySelectorAll('.container');
+
+        container.forEach((can) => {
+          for (let i = 0; i < container.length; i++) {
+          can.appendChild(document.createElement('div'));
+
+
+          }
+        })
+  
+      }
+console.log(fetchMessagesData())
+      </script>
+</body>
+</html>
