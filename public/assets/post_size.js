@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const postSize = (post) => {
   const domenDictionary = [
     '.com', '.net', '.org', '.gov', '.edu', '.info', '.us', '.ru', '.app', '.store',
@@ -8,7 +9,7 @@ const postSize = (post) => {
 
   let linkLength = 0;
 
-  const array = post.split(' ');
+  const array = post.toLowerCase().split(' ');
 
   for (let i = 0; i < array.length; i++) {
     const isAlink = array[i];

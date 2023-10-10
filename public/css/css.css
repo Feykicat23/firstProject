@@ -1,51 +1,42 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
-  
+
   /* Мобильные стили */
   @media only screen and (max-width: 412px) {
   body {
-        /* background-color: #F09A9D; */
         display: flex;
-        justify-content: center;
+        font-family: Lato;
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
         margin: 0 auto;
+        background: #FFF;
+        height: 100vh;
+        width: 100vw;
     }
 
 .banner {
-    /* position: absolute; */
     display: flex;
     width: 100%;
-    height: 528px;
-    left: 0px;
-    top: 0px;
+    height: 545px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: 0;
     }
 
 .bannedContent {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 528px;
-    left: 0px;
-    top: 0px;
     flex-direction: column;
 }
 
 .cover {
-    /* position: absolute; */
-    display: flex;
-    width: 100%;
-    height: 160px;
-    left: 0px;
-    top: 368px;
-    flex-direction: column;
+    height: 225px;
+    background-image: url(./banner.svg);
+    background-size: cover;
 }
 
 .rectangle21 {
@@ -59,7 +50,6 @@
 }
 
 .background {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     height: 368px;
@@ -69,11 +59,11 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 ;
+    padding-bottom: 18px;
+    padding-top: 24px;
 }
 
 .Group28 {
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +76,6 @@
 }
 
 .buttons {
-    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -111,7 +100,6 @@
 
 button {
     box-sizing: border-box;
-    /* position: absolute; */
     display: flex;
     left: 0%;
     right: 0%;
@@ -122,7 +110,6 @@ button {
 }
 
 .logIn {
-    /* position: absolute; */
     display: flex;
     width: 328px;
     height: 52px;
@@ -134,8 +121,7 @@ button {
     background-color: white;
 }
 
-label {
-    /* position: absolute; */
+button {
     left: 0%;
     right: 0%;
     top: 28.85%;
@@ -145,19 +131,40 @@ label {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    /* identical to box height */
     text-align: center;
     }
 
 /* Stay in touch
 with friends even when they are not around */
-p {
-    /* position: absolute; */
-    display: flex;
+h1 {
     width: 328px;
     height: 116px;
     left: 16px;
     top: 84px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #000000;
+}
+
+.rectangle21 {
+    width: 300px;
+}
+
+.photo {
+    width: 100vw;
+    height: 203px;
+    flex-shrink: 0;
+}
+
+p {
+    width: 328px;
+    height: 116px;
     text-align: center;
     font-family: 'Lato';
     font-style: normal;
@@ -168,7 +175,392 @@ p {
     color: #000000;
 }
 
-
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 457px;
+    flex-shrink: 0;
+    background: #0057FF;
+    padding-top: 20px;
+    margin-bottom: 37px;
 }
-  
 
+.num {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 200px;
+    height: 58px;
+}
+
+.small {
+    font-size: 18px;
+    height: 44px;
+}
+
+.Group {
+    width: 200px;
+    height: 130px;
+    flex-shrink: 0;
+}
+
+.allMessages {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.feed {
+    width: 360px;
+    /* height: 916px; */
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post {
+    width: 328px;
+    height: 135px;
+    flex-shrink: 0;
+    margin: 16px 21px 24px;
+}
+
+.two {
+    width: 328px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.three {
+    width: 328px;
+    height: 315px;
+    flex-shrink: 0;
+}
+
+.four {
+    width: 326px;
+    height: 227px;
+    flex-shrink: 0;
+}
+
+h2 {
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 8px;
+    position: relative;
+    right: 100px;
+}
+
+.ellipse {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    fill: #C4C4C4;
+}
+
+.avatar {
+    float: left;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    /* background: url(public/Ellipse1.png) lightgray 50% / cover no-repeat; */
+    border-radius: 30px;
+    margin-right: 12px;
+}
+
+.name {
+    width: 180px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 18px; /*128.571%*/
+    float: left;
+    /* border: 1px solid chocolate;  */
+}
+
+.nick {
+    color: #ABACB1;
+    font-weight: 400;
+}
+
+.hsbSent {
+    position: relative;
+    width: 52px;
+    height: 21px;
+    flex-shrink: 0;
+    color: #ABACB1;
+    text-align: right;
+    font-family: Lato;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    float: left;
+    top: -18px;
+    left: 28px;
+} 
+
+.text {
+    position: static;
+    width: 260px;
+    height: 82px;
+    flex-shrink: 0;
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* border: 1px solid seagreen; */
+    text-align: left;
+    float: left;
+}
+
+.reactions {
+    width: 205px;
+    height: 24px;
+    flex-shrink: 0;
+    /* border: 1px solid #ABACB1; */
+    margin-right: 55px;
+    float: right;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.replies {
+    display: flex;
+    align-items: center;
+}
+
+.numbers {
+    width: 20px;
+    height: 24px;
+    margin-left: 9px;
+    flex-shrink: 0;
+    color: #B1B1B1;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    text-align: left;
+}
+
+.Elon {
+    width: 260px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.photoPingPong {
+    float: right;
+    margin-top: 9px;
+}
+
+.Mia {
+    width: 260px;
+    height: 145px;
+    flex-shrink: 0;
+    float: right
+}
+
+.Line {
+    width: 412px;
+    min-height: 1px;
+    background: #E9E9E9;
+} 
+
+/* Footer */
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 329px;
+    height: 258px;
+    margin-bottom: 36px;
+}
+
+.buttonsFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 328px;
+    height: 120px;
+}
+
+h3 {
+    height: 114px;
+    color: #000;
+    text-align: center;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+/* Modals */
+
+.regPopup {
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    top: 0;
+    left: 0;
+    /* transition: opacity .4s, visibility .4s; */
+}
+
+.modal {
+    width: 100%;
+    border-radius: 25px;
+    background: white;
+    padding: 16px 17px;
+}
+/* 
+.regPopup.open {
+    opacity: 1;
+    visibility: visible;
+} */
+
+.contain {
+    display: flex;
+    justify-content: center;
+}
+
+.stick {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #ABACB1;
+}
+
+.closeWindow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.formName {
+    color: #1D1E22;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 28px; /* 116.667% */
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 330px;
+    height: 408px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.form {
+    width: 328px;
+    height: 52px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.symbols {
+    position: absolute;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    left: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.error {
+    text-align: left;
+    color: #E40060;
+    font-family: Lato;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input {
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    /* margin-bottom: 24px; */
+    min-width: 100%;
+}
+
+.inputReg {
+    width: 362px;
+    padding: 15px 16px;
+}
+
+.formAuthorization {
+    width: 100%;
+    height: 290px;
+    margin-top: 5px;
+}
+
+
+.padding {
+    padding-left: 15px
+}
+
+.red {
+    border-radius: 10px;
+    border: 1px solid #FF97C3;
+    background: #FFDEEC;
+}
+
+.aside {
+    display: none;
+}
+
+};
