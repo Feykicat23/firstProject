@@ -188,9 +188,6 @@ p {
     margin-bottom: 37px;
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 .photo {
     width: 100vw;
     height: 203px;
@@ -223,8 +220,6 @@ p {
     margin-bottom: 37px;
 }
 
-=======
->>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
 .num {
     color: #FFF;
     text-align: center;
@@ -358,16 +353,10 @@ h2 {
 } 
 
 .text {
-<<<<<<< HEAD
     display: inline;
     /* position: static; */
     width: 260px; 
     /* height: 82px; */
-=======
-    position: static;
-    width: 260px;
-    height: 82px;
->>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
     flex-shrink: 0;
     color: #1D1E22;
     font-family: Lato;
@@ -422,12 +411,9 @@ h2 {
 }
 
 .photoPingPong {
-<<<<<<< HEAD
     width: 260px;
     height: 171px;
     flex-shrink: 0;
-=======
->>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
     float: right;
     margin-top: 9px;
 }
@@ -613,7 +599,6 @@ input {
     display: none;
 }
 
-<<<<<<< HEAD
 .color-grey {
     background-color: lightgray;
     color: lightgray;
@@ -621,7 +606,5 @@ input {
 }
 
 };
->>>>>>> Stashed changes
-=======
-};
->>>>>>> b37b17282ef538279ca717572763c7dbe5746b35
+
+
