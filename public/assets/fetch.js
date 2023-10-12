@@ -1,7 +1,7 @@
 import postHbSent from './postHbSent.js';
 
 function fetchAndDisplayStatistics() {
-  fetch('/public/data.json')
+  fetch('/data.json')
     .then((response) => response.json())
     .then((data) => {
       const { users, messagesSend, todayMessages } = data.statistic;
