@@ -18,12 +18,12 @@ function fetchAndDisplayStatistics() {
 fetchAndDisplayStatistics();
 
 function fetchMessagesData() {
-  return fetch('/public/data.json')
+  return fetch('/data.json')
     .then((response) => response.json());
 }
 
 function fetchImagesData() {
-  return fetch('/public/pictures.json')
+  return fetch('/pictures.json')
     .then((response) => response.json());
 }
 
