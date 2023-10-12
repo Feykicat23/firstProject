@@ -15,7 +15,7 @@
     "prefer-arrow-callback": 0,
     "mocha/prefer-arrow-callback": 2,
     "linebreak-style": 0,
-    "allowForLoopAfterthoughts": true
+    "allowForLoopAfterthoughts": 0
   },
   "extends": ["airbnb", "plugin:mocha/recommended"],
   "plugins": [
