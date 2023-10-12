@@ -162,38 +162,6 @@ h1 {
     flex-shrink: 0;
 }
 
-p {
-    width: 328px;
-    height: 116px;
-    text-align: center;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 38px;
-    text-align: center;
-    color: #000000;
-}
-
-.statistics {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 457px;
-    flex-shrink: 0;
-    background: #0057FF;
-    padding-top: 20px;
-    margin-bottom: 37px;
-}
-
-.photo {
-    width: 100vw;
-    height: 203px;
-    flex-shrink: 0;
-}
-
 /* p {
     width: 328px;
     height: 116px;
@@ -606,5 +574,3 @@ input {
 }
 
 };
-
-
