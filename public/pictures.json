@@ -1,0 +1,39 @@
+{
+    "picturesMessage": [
+      {
+        "messageId": 1,
+        "urlAvatar": "./css/image9.svg",
+        "urlMessagePic": ""
+      },
+      {
+        "messageId": 2,
+        "urlAvatar": "./css/image5.svg",
+        "urlMessagePic": ""
+      },
+      {
+        "messageId": 3,
+        "urlAvatar": "./css/image7.svg",
+        "urlMessagePic": "./css/image6.svg"
+      },
+      {
+        "messageId": 4,
+        "urlAvatar": "./css/image8.svg",
+        "urlMessagePic": ""
+      }
+     
+    ],
+    "picturesChannel": [
+      {
+        "channelId": 1,
+        "url": "./css/user1.svg"
+      },
+      {
+        "channelId": 2,
+        "url": "./css/user2.svg"
+      },
+      {
+        "channelId": 3,
+        "url": "./css/user3.svg"
+      }
+    ]
+  }
