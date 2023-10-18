@@ -110,3 +110,66 @@ Promise.all([fetchMessagesData(), fetchImagesData()])
       });
     }
   });
+
+/// /////////// rightBarHTML
+
+Promise.all([fetchMessagesData(), fetchImagesData()])
+  .then(([messagesData, imagesData]) => {
+    const arrayTopics = messagesData.сurrentTopics;
+
+    const arrayBlogs = messagesData.blogs;
+
+    const { picturesChannel } = imagesData;
+
+    const topicsHtml = document.querySelectorAll('.top');
+    const messageTopicsHtml = document.querySelectorAll('.bottom');
+    const nameGroupHtml = document.querySelectorAll('.nameGroup');
+    const nickGroupHtml = document.querySelectorAll('.nickGroup');
+    const avatarImage = document.querySelectorAll('.avatarOfUser img');
+    const readButtonHtml = document.querySelectorAll('.readButton');
+
+    /// /// Current topics
+
+    topicsHtml.forEach((topic, index) => {
+      const curentTop = arrayTopics[index];
+
+      topic.classList.remove('topic');
+      topic.textContent = curentTop.tag;
+    });
+
+    messageTopicsHtml.forEach((topic, index) => {
+      const curentTop = arrayTopics[index];
+
+      topic.classList.remove('messagesTopic');
+      topic.textContent = curentTop.messages;
+    });
+
+    /// /// Interesting groups
+
+    nameGroupHtml.forEach((topic, index) => {
+      const curentTop = arrayBlogs[index];
+
+      topic.classList.remove('color-grey');
+      topic.textContent = curentTop.channelName;
+    });
+
+    nickGroupHtml.forEach((topic, index) => {
+      const curentTop = arrayBlogs[index];
+
+      topic.classList.remove('color-grey');
+      topic.textContent = curentTop.channelNick;
+    });
+
+    avatarImage.forEach((topic, index) => {
+      const curentTop = picturesChannel[index].url;
+
+      topic.classList.remove('color-grey');
+      topic.src = `${curentTop}`;
+    });
+
+    readButtonHtml.forEach((topic) => {
+      topic.classList.remove('color-grey');
+    });
+
+    // console.log(imageContains);
+  });
