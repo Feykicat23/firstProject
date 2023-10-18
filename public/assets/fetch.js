@@ -1,3 +1,5 @@
+import postHbSent from './postHbSent.js';
+
 function fetchAndDisplayStatistics() {
   fetch('/data.json')
     .then((response) => response.json())
@@ -87,6 +89,24 @@ Promise.all([fetchMessagesData(), fetchImagesData()])
           postContainer.innerHTML = '';
           postContainer.innerHTML += messageHTML;
         }
+      });
+
+      /// //// Times goes by...
+
+      const HsbSentHTML = document.querySelectorAll('.hsbSent');
+
+      HsbSentHTML.forEach((elementHTML, index) => {
+        const actualTime = messagesArray[index].time;
+        let count = 0;
+
+        const updateElement = () => {
+          elementHTML.textContent = postHbSent(actualTime + count);
+          count++;
+        };
+
+        updateElement();
+
+        setInterval(updateElement, 10000);
       });
     }
   });
