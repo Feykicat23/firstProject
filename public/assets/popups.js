@@ -95,7 +95,7 @@ function validationRegistration(form) {
       console.log('Ошибка поля');
       createError(input, 'Write something!');
       result = false;
-      return; // Используйте return вместо continue, чтобы выйти из forEach при ошибке.
+      return; 
     }
 
     if (i === 1 && !isAValidMail(mailFormInput)) {
