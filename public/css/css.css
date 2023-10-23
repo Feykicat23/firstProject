@@ -43,7 +43,7 @@
     /* position: absolute; */
     display: flex;
     width: 360px;
-    height: 160px;
+    /* height: 160px; */
     left: 0px;
     top: 368px;
     background: #C4C4C4;
@@ -162,7 +162,7 @@ h1 {
     flex-shrink: 0;
 }
 
-p {
+/* p {
     width: 328px;
     height: 116px;
     text-align: center;
@@ -173,7 +173,7 @@ p {
     line-height: 38px;
     text-align: center;
     color: #000000;
-}
+} */
 
 .statistics {
     display: flex;
@@ -321,9 +321,10 @@ h2 {
 } 
 
 .text {
-    position: static;
-    width: 260px;
-    height: 82px;
+    display: inline;
+    /* position: static; */
+    width: 260px; 
+    /* height: 82px; */
     flex-shrink: 0;
     color: #1D1E22;
     font-family: Lato;
@@ -378,6 +379,9 @@ h2 {
 }
 
 .photoPingPong {
+    width: 260px;
+    height: 171px;
+    flex-shrink: 0;
     float: right;
     margin-top: 9px;
 }
@@ -561,6 +565,12 @@ input {
 
 .aside {
     display: none;
+}
+
+.color-grey {
+    background-color: lightgray;
+    color: lightgray;
+    margin-bottom: 6px;
 }
 
 };
