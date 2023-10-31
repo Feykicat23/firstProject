@@ -50,53 +50,37 @@ app.use(express.json()); /// Распаковка джсон обьекта
 /// / create; delete; post
 
 app.post('/posts', async (req, res) => {
-  try {
-    const { name, nickname, message } = req.body;
-    const createPost = 'INSERT INTO posts (name, nickname, message) VALUES ($1, $2, $3)';
+  const { name, nickname, message } = req.body;
+  const createPost = 'INSERT INTO posts (name, nickname, message) VALUES ($1, $2, $3)';
 
-    await pool.query(createPost, [name, nickname, message]);
+  await pool.query(createPost, [name, nickname, message]);
 
-    return res.status(201).json({ message: 'Post has been created' });
-  } catch (error) {
-    console.error('Ошибка при запросе к базе данных:', error);
-    res.status(500).json({ error: 'Произошла ошибка при обращении к базе данных' });
-  }
+  return res.status(201).json({ message: 'Post has been created' });
 });
 
 app.delete('/posts/:id', async (req, res) => {
   const { postId } = req.params;
+  const checkPostExists = 'SELECT * FROM posts WHERE id = $1';
+  const { rows } = await pool.query(checkPostExists, [postId]);
 
-  try {
-    const checkPostExists = 'SELECT * FROM posts WHERE id = $1';
-    const { rows } = await pool.query(checkPostExists, [postId]);
-
-    if (rows.length > 0) {
-      await pool.query('DELETE FROM posts WHERE id = $1', [postId]);
-      return res.status(204).json({ message: 'Post successfully deleted' });
-    }
-    return res.status(404).json({ message: 'Post not found' });
-  } catch (error) {
-    console.error('Ошибка при запросе к базе данных:', error);
-    res.status(500).json({ error: 'Произошла ошибка при обращении к базе данных' });
+  if (rows.length > 0) {
+    await pool.query('DELETE FROM posts WHERE id = $1', [postId]);
+    return res.status(204).json({ message: 'Post successfully deleted' });
   }
+  return res.status(404).json({ message: 'Post not found' });
 });
 
 app.post('/posts/:id', async (req, res) => {
   const { postId } = req.params;
   const { message } = req.body; // Предполагается, что вы ожидаете сообщение в теле запроса
 
-  try {
-    const checkPostExists = 'SELECT * FROM posts WHERE id = $1';
-    const { rows } = await pool.query(checkPostExists, [postId]);
+  const checkPostExists = 'SELECT * FROM posts WHERE id = $1';
+  const { rows } = await pool.query(checkPostExists, [postId]);
 
-    if (rows.length > 0) {
-      const editPost = 'UPDATE posts SET message = $1 WHERE id = $2';
-      await pool.query(editPost, [message, postId]);
-      return res.status(204).json({ message: 'Post successfully updated' });
-    }
-    return res.status(404).json({ error: 'Post not found' });
-  } catch (error) {
-    console.error('Ошибка при запросе к базе данных:', error);
-    res.status(500).json({ error: 'Произошла ошибка при обращении к базе данных' });
+  if (rows.length > 0) {
+    const editPost = 'UPDATE posts SET message = $1 WHERE id = $2';
+    await pool.query(editPost, [message, postId]);
+    return res.status(204).json({ message: 'Post successfully updated' });
   }
+  return res.status(404).json({ error: 'Post not found' });
 });
