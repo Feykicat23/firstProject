@@ -1,4 +1,5 @@
 import fs from 'fs';
+import crypto from 'crypto';
 import express from 'express';
 import pkg from 'pg';
 
@@ -83,4 +84,41 @@ app.post('/posts/:id', async (req, res) => {
     return res.status(204).json({ message: 'Post successfully updated' });
   }
   return res.status(404).json({ error: 'Post not found' });
+});
+
+/// / Создание нового пользователя
+
+app.post('/createUser', async (req, res) => {
+  const { login, email, password } = req.body;
+  const salt = bcrypt.genSaltSync(10);
+  const passwordToSave = bcrypt.hashSync(password, salt);
+
+  try {
+    const checkUserQuery = 'SELECT * FROM createUser WHERE email = $1';
+    const { rows } = await pool.query(checkUserQuery, [email]);
+
+    if (rows.length > 0) {
+      return res.status(400).json({ message: 'Пользователь с таким email уже существует' });
+    }
+
+    const createUserQuery = 'INSERT INTO createUser (username, email, password) VALUES ($1, $2, $3)';
+    await pool.query(createUserQuery, [login, email, passwordToSave]);
+
+    return res.status(200).json({ message: 'Пользователь успешно создан' });
+  } catch (error) {
+    console.error('Ошибка при создании пользователя:', error);
+    return res.status(500).json({ error: 'Произошла ошибка при создании пользователя' });
+  }
+});
+
+/// /// База пользователей
+
+app.get('/createUser', async (req, res) => {
+  try {
+    const information = await pool.query('SELECT * from createUser');
+    res.type('json').send(information.rows);
+  } catch (error) {
+    console.error('Ошибка при запросе к базе данных:', error);
+    res.status(500).json({ error: 'Произошла ошибка при получении данных из базы данных' });
+  }
 });
