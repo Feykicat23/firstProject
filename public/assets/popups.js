@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import isAValidMail from './validMail.js';
 
 const openModals1 = document.querySelectorAll('.registration');
@@ -115,19 +116,28 @@ function validationRegistration(form) {
   return result;
 }
 
-document.getElementById('formRegistation').addEventListener('submit', function (event) {
+document.getElementById('formRegistation').addEventListener('submit', async function (event) {
   event.preventDefault();
 
   if (validationRegistration(this)) {
-    alert('Форма отправлена');
-
     const person = {
       login: allInputs[0].value,
       email: allInputs[1].value,
       password: allInputs[2].value,
     };
 
-    console.log(person);
+    // console.log(JSON.stringify(person));
+
+    const response = await fetch('/createUser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(person),
+    });
+
+    const result = await response.json();
+    alert(result.message);
   }
 });
 
@@ -158,17 +168,24 @@ function validationLogIn(form) {
   return result;
 }
 
-document.getElementById('formAuthorization').addEventListener('submit', function (event) {
+document.getElementById('formAuthorization').addEventListener('submit', async function (event) {
   event.preventDefault();
 
   if (validationLogIn(this)) {
-    alert('Форма отправлена');
-
     const logIn = {
       email: allInputs[0].value,
       password: allInputs[1].value,
     };
 
-    console.log(logIn);
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(logIn),
+    });
+
+    const result = await response.json();
+    alert(result.message);
   }
 });
