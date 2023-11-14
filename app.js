@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import fs from 'fs';
 import crypto from 'crypto';
 import express from 'express';
@@ -111,4 +112,30 @@ app.post('/createUser', async (req, res) => {
 app.get('/createUser', async (req, res) => {
   const information = await pool.query('SELECT * from createUser');
   res.type('json').send(information.rows);
+});
+
+/// /// Авторизация
+
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  const checkUserQuery = 'SELECT * FROM createUser WHERE email = $1';
+  const { rows } = await pool.query(checkUserQuery, [email]);
+
+  if (rows.length === 0) {
+    return res.status(400).json({ message: 'Пользователь не найден' });
+  }
+
+  const hashPassword = rows[0].password;
+
+  // Сравнение введенного пароля с хешированным паролем из базы данных
+  bcrypt.compare(password, hashPassword, async (err, passwordsMatch) => {
+    // if (err) {
+    //   return res.status(500).json({ error: 'Ошибка при сравнении паролей' });
+    // }
+    if (passwordsMatch) {
+      return res.status(200).json({ message: 'Успешная авторизация' });
+    }
+    return res.status(401).json({ message: 'Invalid password' });
+  });
 });
