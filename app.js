@@ -134,6 +134,29 @@ app.post('/login', async (req, res) => {
     //   return res.status(500).json({ error: 'Ошибка при сравнении паролей' });
     // }
     if (passwordsMatch) {
+      const accessToken = crypto.randomUUID();
+      const expirationDate = new Date();
+      const userId = rows[0].id;
+
+      const insertSessionQuery = 'INSERT INTO sessions (user_id, token, created_at) VALUES ($1, $2, NOW())';
+      const values = [userId, accessToken];
+
+      expirationDate.setDate(expirationDate.getDate() + 7);
+
+      await pool.query(insertSessionQuery, values);
+      res.cookie('token', accessToken, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'strict',
+        expires: expirationDate,
+      });
+
+      res.cookie('email', email, {
+        httpOnly: false,
+        secure: true,
+        sameSite: 'strict',
+        expires: expirationDate,
+      });
       return res.status(200).json({ message: 'Успешная авторизация' });
     }
     return res.status(401).json({ message: 'Invalid password' });
